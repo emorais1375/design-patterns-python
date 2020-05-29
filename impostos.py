@@ -1,7 +1,9 @@
 # -*- coding: UTF-8 -*-
 # impostos.py
-def calcula_ICMS(orcamento) -> float:
-    return orcamento.valor * 0.1
+class ICMS(object):
+	def calcula(orcamento) -> float:
+	    return orcamento.valor * 0.1
 
-def calcula_ISS(orcamento) -> float:
-    return orcamento.valor * 0.06
+class ISS(object):
+	def calcula(orcamento) -> float:
+	    return orcamento.valor * 0.06

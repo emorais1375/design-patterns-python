@@ -33,3 +33,6 @@ Paradigma da orientação à objetos:
 
 ## Dúvidas
 No pattern Strategy o que seria estatégia?
+
+Duck Typing que possui a máxima: "se fala igual a um pato, se voa igual a um pato e se anda igual a um pato, é um pato".
+Passar objeto como parametro por ter métodos iguais.

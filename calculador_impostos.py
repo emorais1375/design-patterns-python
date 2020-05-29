@@ -1,16 +1,14 @@
 # -*- coding: UTF-8 -*-
 
 # calculador_de_impostos.py
+from impostos import ICMS, ISS
+
 
 class Calculador_de_impostos(object):
 
   def realiza_calculo(self, orcamento, imposto):
-    if 'ICMS' == imposto:
-        icms_calculado = orcamento.valor * 0.1
-        print(icms_calculado)
-    elif 'ISS' == imposto:
-        iss_calculado = orcamento.valor * 0.06
-        print(iss_calculado)
+    calculado = imposto(orcamento)
+    print(calculado)
 
 if __name__ == '__main__':
 
@@ -18,5 +16,5 @@ if __name__ == '__main__':
 
     orcamento = Orcamento(500.0)
     calculador_de_impostos = Calculador_de_impostos()
-    calculador_de_impostos.realiza_calculo(orcamento, 'ICMS') ## imprimirá 50.0
-    calculador_de_impostos.realiza_calculo(orcamento, 'ISS') ## imprimirá 30.0
+    calculador_de_impostos.realiza_calculo(orcamento, ICMS.calcula) ## imprimirá 50.0
+    calculador_de_impostos.realiza_calculo(orcamento, ISS.calcula) ## imprimirá 30.0
